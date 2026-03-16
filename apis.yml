@@ -1,138 +1,68 @@
+aid: cisco-collaboration-hybrid-solutions
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/cisco-collaboration-hybrid-solutions/refs/heads/main/apis.yml
 name: Cisco Collaboration Hybrid Solutions
-description: APIs for Cisco's hybrid collaboration solutions that combine cloud and on-premises deployments for unified communications, meetings, messaging, and calling
-image: https://www.cisco.com/c/en/us/solutions/collaboration/jcr:content/Grid/category_atl_copy_co/layout-category-atl/anchor_info.img.png/1635789600000.png
-url: https://developer.cisco.com/collaboration/
-created: '2024-01-15'
-modified: '2024-01-15'
-specificationVersion: '0.18'
 tags:
-- collaboration
-- hybrid cloud
-- unified communications
-- meetings
-- webex
-- calling
+  - Collaboration
+  - Hybrid Cloud
+  - Unified Communications
+  - Meetings
+  - Webex
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2024-01-15'
+modified: '2026-03-16'
+position: Consumer
+description: >-
+  APIs for Cisco's hybrid collaboration solutions that combine cloud and
+  on-premises deployments for unified communications, meetings, messaging,
+  and calling.
 apis:
-- name: Webex APIs
-  description: APIs for Webex cloud services including meetings, messaging, teams, and spaces
-  image: https://developer.cisco.com/images/webex-logo.png
-  humanURL: https://developer.webex.com/
-  baseURL: https://webexapis.com/v1
-  tags:
-  - meetings
-  - messaging
-  - teams
-  - collaboration
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/getting-started
-  - type: OpenAPI
-    url: https://developer.webex.com/docs/api/v1/openapi.json
-  - type: Authentication
-    url: https://developer.webex.com/docs/integrations
-  - type: SDKs
-    url: https://developer.webex.com/docs/sdks
-  contact:
-  - FN: Webex Developer Support
-    email: devsupport@webex.com
-    url: https://developer.webex.com/support
-- name: Webex Meetings API
-  description: APIs for scheduling, managing, and integrating with Webex Meetings
-  humanURL: https://developer.cisco.com/docs/webex-meetings/
-  baseURL: https://api.webex.com/WBXService/XMLService
-  tags:
-  - meetings
-  - scheduling
-  - recordings
-  properties:
-  - type: Documentation
-    url: https://developer.cisco.com/docs/webex-meetings/
-  - type: XML Schema
-    url: https://developer.cisco.com/docs/webex-meetings/#!xml-api-reference
-- name: Webex Hybrid Services API
-  description: APIs for managing hybrid cloud and on-premises deployments
-  humanURL: https://developer.cisco.com/docs/webex-hybrid-services/
-  baseURL: https://webexapis.com/v1
-  tags:
-  - hybrid
-  - calendar
-  - call
-  - media
-  properties:
-  - type: Documentation
-    url: https://developer.cisco.com/docs/webex-hybrid-services/
-  - type: API Reference
-    url: https://developer.webex.com/docs/api/v1/hybrid-clusters
-- name: Webex Calling API
-  description: APIs for cloud calling capabilities including call control, voicemail, and telephony features
-  humanURL: https://developer.webex.com/docs/api/v1/webex-calling
-  baseURL: https://webexapis.com/v1
-  tags:
-  - calling
-  - telephony
-  - voicemail
-  - call-control
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/v1/webex-calling
-  - type: API Reference
-    url: https://developer.webex.com/docs/api/v1/call-controls
-- name: Control Hub API
-  description: APIs for administering and managing Webex organizations, users, and services
-  humanURL: https://developer.webex.com/docs/api/v1/organizations
-  baseURL: https://webexapis.com/v1
-  tags:
-  - administration
-  - management
-  - organizations
-  - users
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/v1/organizations
-  - type: API Reference
-    url: https://developer.webex.com/docs/api/v1/admin-audit-events
-- name: Webex Devices API
-  description: APIs for managing and controlling Webex Room Devices and Desk Devices
-  humanURL: https://developer.webex.com/docs/api/v1/devices
-  baseURL: https://webexapis.com/v1
-  tags:
-  - devices
-  - room-systems
-  - endpoints
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/v1/devices
-  - type: xAPI Documentation
-    url: https://roomos.cisco.com/xapi
-- name: Webex Events API
-  description: APIs for creating and managing virtual events and webinars
-  humanURL: https://developer.webex.com/docs/api/v1/events
-  baseURL: https://webexapis.com/v1
-  tags:
-  - events
-  - webinars
-  - virtual-events
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/v1/events
+  - aid: cisco-collaboration-hybrid-solutions:webex-api
+    name: Webex APIs
+    tags:
+      - Meetings
+      - Messaging
+      - Collaboration
+    humanURL: https://developer.webex.com/
+    properties:
+      - url: https://developer.webex.com/docs/api/getting-started
+        type: Documentation
+      - url: https://developer.webex.com/docs/api/v1/openapi.json
+        type: OpenAPI
+      - url: https://developer.webex.com/docs/integrations
+        type: Authentication
+    description: >-
+      APIs for Webex cloud services including meetings, messaging, teams,
+      and spaces.
+  - aid: cisco-collaboration-hybrid-solutions:webex-hybrid-services-api
+    name: Webex Hybrid Services API
+    tags:
+      - Hybrid
+      - Collaboration
+    humanURL: https://developer.cisco.com/docs/webex-hybrid-services/
+    properties:
+      - url: https://developer.cisco.com/docs/webex-hybrid-services/
+        type: Documentation
+    description: >-
+      APIs for managing hybrid cloud and on-premises deployments.
 common:
-- type: Portal
-  url: https://developer.cisco.com/collaboration/
-- type: Getting Started
-  url: https://developer.webex.com/docs/getting-started
-- type: Authentication
-  url: https://developer.webex.com/docs/integrations
-- type: Webhooks
-  url: https://developer.webex.com/docs/api/guides/webhooks
-- type: Change Log
-  url: https://developer.webex.com/changelog
-- type: Status Page
-  url: https://status.webex.com/
-- type: Community
-  url: https://community.cisco.com/t5/collaboration-voice-and-video/bd-p/discussions-collaboration
-- type: GitHub Organization
-  url: https://github.com/WebexSamples
+  - type: Portal
+    url: https://developer.cisco.com/collaboration/
+  - type: Getting Started
+    url: https://developer.webex.com/docs/getting-started
+  - type: Change Log
+    url: https://developer.webex.com/changelog
+  - type: Status
+    url: https://status.webex.com/
+  - type: Community
+    url: https://community.cisco.com/
+  - type: GitHub Organization
+    url: https://github.com/WebexSamples
+  - type: Privacy Policy
+    url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
 maintainers:
-- FN: Cisco Developer Relations
-  email: developer-relations@cisco.com
-  url: https://developer.cisco.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+specificationVersion: '0.19'
