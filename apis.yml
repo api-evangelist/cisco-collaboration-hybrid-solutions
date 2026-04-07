@@ -5,8 +5,8 @@ name: Cisco Collaboration Hybrid Solutions
 tags:
   - Collaboration
   - Hybrid Cloud
-  - Unified Communications
   - Meetings
+  - Unified Communications
   - Webex
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -22,9 +22,9 @@ apis:
   - aid: cisco-collaboration-hybrid-solutions:webex-api
     name: Webex APIs
     tags:
+      - Collaboration
       - Meetings
       - Messaging
-      - Collaboration
     humanURL: https://developer.webex.com/
     properties:
       - url: https://developer.webex.com/docs/api/getting-started
@@ -39,8 +39,8 @@ apis:
   - aid: cisco-collaboration-hybrid-solutions:webex-hybrid-services-api
     name: Webex Hybrid Services API
     tags:
-      - Hybrid
       - Collaboration
+      - Hybrid
     humanURL: https://developer.cisco.com/docs/webex-hybrid-services/
     properties:
       - url: https://developer.cisco.com/docs/webex-hybrid-services/
