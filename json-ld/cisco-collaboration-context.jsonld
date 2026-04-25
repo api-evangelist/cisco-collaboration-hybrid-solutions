@@ -1,0 +1,112 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "webex": "https://webexapis.com/v1/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Organization": {
+      "@id": "webex:Organization",
+      "@context": {
+        "id": "webex:id",
+        "displayName": "schema:name",
+        "created": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Person": {
+      "@id": "webex:Person",
+      "@context": {
+        "id": "webex:id",
+        "displayName": "schema:name",
+        "emails": "schema:email",
+        "orgId": "schema:memberOf",
+        "roles": "webex:roles",
+        "licenses": "webex:licenses",
+        "status": "webex:status"
+      }
+    },
+
+    "Meeting": {
+      "@id": "webex:Meeting",
+      "@context": {
+        "id": "webex:id",
+        "title": "schema:name",
+        "agenda": "schema:description",
+        "start": {
+          "@id": "schema:startDate",
+          "@type": "xsd:dateTime"
+        },
+        "end": {
+          "@id": "schema:endDate",
+          "@type": "xsd:dateTime"
+        },
+        "timezone": "schema:timezone",
+        "hostUserId": "webex:host_user_id",
+        "siteUrl": {
+          "@id": "schema:url",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "Space": {
+      "@id": "webex:Space",
+      "@context": {
+        "id": "webex:id",
+        "title": "schema:name",
+        "type": "webex:room_type",
+        "isLocked": "webex:is_locked",
+        "lastActivity": {
+          "@id": "webex:last_activity",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Message": {
+      "@id": "webex:Message",
+      "@context": {
+        "id": "webex:id",
+        "roomId": "webex:room_id",
+        "personId": "webex:person_id",
+        "text": "schema:text",
+        "markdown": "webex:markdown",
+        "created": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Device": {
+      "@id": "webex:Device",
+      "@context": {
+        "id": "webex:id",
+        "displayName": "schema:name",
+        "product": "schema:model",
+        "type": "webex:device_type",
+        "ip": "webex:ip",
+        "mac": "webex:mac",
+        "connectionStatus": "webex:connection_status",
+        "softwareVersion": "schema:softwareVersion"
+      }
+    },
+
+    "HybridConnector": {
+      "@id": "webex:HybridConnector",
+      "@context": {
+        "id": "webex:id",
+        "name": "schema:name",
+        "type": "webex:connector_type",
+        "clusterId": "webex:cluster_id",
+        "status": "webex:status",
+        "version": "schema:softwareVersion"
+      }
+    }
+  }
+}
