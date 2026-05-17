@@ -150,25 +150,25 @@ common:
     url: https://developer.cisco.com/collaboration/
   - type: Webex Developer Portal
     url: https://developer.webex.com/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developer.webex.com/docs/getting-started
   - type: Authentication
     url: https://developer.webex.com/docs/integrations
   - type: Webhooks
     url: https://developer.webex.com/docs/api/guides/webhooks
-  - type: Change Log
+  - type: ChangeLog
     url: https://developer.webex.com/changelog
-  - type: Status
+  - type: StatusPage
     url: https://status.webex.com/
   - type: Community
     url: https://community.cisco.com/t5/collaboration-voice-and-video/bd-p/discussions-collaboration
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/WebexSamples
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/cisco-collaboration-context.jsonld
 maintainers:
   - FN: Kin Lane
