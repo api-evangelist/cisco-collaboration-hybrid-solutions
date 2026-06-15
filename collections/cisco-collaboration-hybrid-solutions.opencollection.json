@@ -1,0 +1,580 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cisco Webex Platform API (Collaboration Hybrid Solutions)",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rooms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rooms (spaces)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/rooms",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sortBy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List rooms (spaces)"
+        },
+        {
+          "info": {
+            "name": "Create a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://webexapis.com/v1/rooms",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a room"
+        },
+        {
+          "info": {
+            "name": "Get room details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/rooms/:roomId",
+            "params": [
+              {
+                "name": "roomId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get room details"
+        },
+        {
+          "info": {
+            "name": "Update a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://webexapis.com/v1/rooms/:roomId",
+            "params": [
+              {
+                "name": "roomId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a room"
+        },
+        {
+          "info": {
+            "name": "Delete a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://webexapis.com/v1/rooms/:roomId",
+            "params": [
+              {
+                "name": "roomId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a room"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List messages in a room",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/messages",
+            "params": [
+              {
+                "name": "roomId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "mentionedPeople",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "before",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "beforeMessage",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List messages in a room"
+        },
+        {
+          "info": {
+            "name": "Post a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://webexapis.com/v1/messages",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Post a message"
+        },
+        {
+          "info": {
+            "name": "Get message details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/messages/:messageId",
+            "params": [
+              {
+                "name": "messageId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get message details"
+        },
+        {
+          "info": {
+            "name": "Delete a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://webexapis.com/v1/messages/:messageId",
+            "params": [
+              {
+                "name": "messageId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a message"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Memberships",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List memberships",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/memberships",
+            "params": [
+              {
+                "name": "roomId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "personEmail",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List memberships"
+        },
+        {
+          "info": {
+            "name": "Create a membership",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://webexapis.com/v1/memberships",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a membership"
+        },
+        {
+          "info": {
+            "name": "Get a membership",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/memberships/:membershipId",
+            "params": [
+              {
+                "name": "membershipId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a membership"
+        },
+        {
+          "info": {
+            "name": "Update a membership",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://webexapis.com/v1/memberships/:membershipId",
+            "params": [
+              {
+                "name": "membershipId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a membership"
+        },
+        {
+          "info": {
+            "name": "Delete a membership",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://webexapis.com/v1/memberships/:membershipId",
+            "params": [
+              {
+                "name": "membershipId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a membership"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/teams",
+            "params": [
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List teams"
+        },
+        {
+          "info": {
+            "name": "Create a team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://webexapis.com/v1/teams",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a team"
+        },
+        {
+          "info": {
+            "name": "Get team details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/teams/:teamId",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get team details"
+        },
+        {
+          "info": {
+            "name": "Update a team",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://webexapis.com/v1/teams/:teamId",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a team"
+        },
+        {
+          "info": {
+            "name": "Delete a team",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://webexapis.com/v1/teams/:teamId",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a team"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/webhooks",
+            "params": [
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://webexapis.com/v1/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a webhook"
+        },
+        {
+          "info": {
+            "name": "Get webhook details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get webhook details"
+        },
+        {
+          "info": {
+            "name": "Update a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://webexapis.com/v1/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a webhook"
+        },
+        {
+          "info": {
+            "name": "Delete a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://webexapis.com/v1/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://webexapis.com/v1/devices",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orgId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List devices"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
