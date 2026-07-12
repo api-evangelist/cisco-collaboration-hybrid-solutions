@@ -173,3 +173,11 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+
+common:
+  - type: DomainSecurity
+    url: security/cisco-collaboration-hybrid-solutions-domain-security.yml
+  - type: Authentication
+    url: authentication/cisco-collaboration-hybrid-solutions-authentication.yml
+  - url: https://blog.webex.com/feed/
+    type: Blog
