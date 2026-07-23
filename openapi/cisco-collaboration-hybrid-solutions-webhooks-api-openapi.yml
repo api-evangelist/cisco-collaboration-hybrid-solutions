@@ -1,0 +1,130 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Webhooks API
+  description: 'Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+
+    personal access tokens, or service-app tokens issued via the Webex
+
+    Developer Portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+- url: https://webexapis.com/v1
+  description: Webex APIs
+security:
+- bearerAuth: []
+tags:
+- name: Webhooks
+paths:
+  /webhooks:
+    get:
+      tags:
+      - Webhooks
+      summary: List webhooks
+      operationId: listWebhooks
+      parameters:
+      - in: query
+        name: max
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: A list of webhooks
+    post:
+      tags:
+      - Webhooks
+      summary: Create a webhook
+      operationId: createWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - name
+              - targetUrl
+              - resource
+              - event
+              properties:
+                name:
+                  type: string
+                targetUrl:
+                  type: string
+                  format: uri
+                resource:
+                  type: string
+                  enum:
+                  - messages
+                  - memberships
+                  - rooms
+                  - attachmentActions
+                  - meetings
+                  - recordings
+                  - telephonyCalls
+                event:
+                  type: string
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - ended
+                filter:
+                  type: string
+                secret:
+                  type: string
+      responses:
+        '200':
+          description: Created webhook
+  /webhooks/{webhookId}:
+    parameters:
+    - in: path
+      name: webhookId
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Webhooks
+      summary: Get webhook details
+      operationId: getWebhook
+      responses:
+        '200':
+          description: A webhook
+    put:
+      tags:
+      - Webhooks
+      summary: Update a webhook
+      operationId: updateWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated webhook
+    delete:
+      tags:
+      - Webhooks
+      summary: Delete a webhook
+      operationId: deleteWebhook
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token

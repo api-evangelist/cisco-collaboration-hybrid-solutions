@@ -1,0 +1,180 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Messages API
+  description: 'Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+
+    personal access tokens, or service-app tokens issued via the Webex
+
+    Developer Portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+- url: https://webexapis.com/v1
+  description: Webex APIs
+security:
+- bearerAuth: []
+tags:
+- name: Messages
+paths:
+  /messages:
+    get:
+      tags:
+      - Messages
+      summary: List messages in a room
+      operationId: listMessages
+      parameters:
+      - in: query
+        name: roomId
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: mentionedPeople
+        schema:
+          type: string
+      - in: query
+        name: before
+        schema:
+          type: string
+          format: date-time
+      - in: query
+        name: beforeMessage
+        schema:
+          type: string
+      - in: query
+        name: max
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: A list of messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Message'
+    post:
+      tags:
+      - Messages
+      summary: Post a message
+      operationId: createMessage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MessageCreate'
+      responses:
+        '200':
+          description: Created message
+  /messages/{messageId}:
+    parameters:
+    - in: path
+      name: messageId
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Messages
+      summary: Get message details
+      operationId: getMessage
+      responses:
+        '200':
+          description: A message
+    delete:
+      tags:
+      - Messages
+      summary: Delete a message
+      operationId: deleteMessage
+      responses:
+        '204':
+          description: Deleted
+components:
+  schemas:
+    MessageCreate:
+      type: object
+      properties:
+        roomId:
+          type: string
+        parentId:
+          type: string
+        toPersonId:
+          type: string
+        toPersonEmail:
+          type: string
+          format: email
+        text:
+          type: string
+        markdown:
+          type: string
+        files:
+          type: array
+          items:
+            type: string
+            format: uri
+        attachments:
+          type: array
+          items:
+            type: object
+    Message:
+      type: object
+      properties:
+        id:
+          type: string
+        roomId:
+          type: string
+        roomType:
+          type: string
+          enum:
+          - direct
+          - group
+        toPersonId:
+          type: string
+        toPersonEmail:
+          type: string
+          format: email
+        text:
+          type: string
+        markdown:
+          type: string
+        html:
+          type: string
+        files:
+          type: array
+          items:
+            type: string
+            format: uri
+        personId:
+          type: string
+        personEmail:
+          type: string
+          format: email
+        created:
+          type: string
+          format: date-time
+        mentionedPeople:
+          type: array
+          items:
+            type: string
+        attachments:
+          type: array
+          items:
+            type: object
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token

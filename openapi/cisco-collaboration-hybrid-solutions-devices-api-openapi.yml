@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices API
+  description: 'Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+
+    personal access tokens, or service-app tokens issued via the Webex
+
+    Developer Portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+- url: https://webexapis.com/v1
+  description: Webex APIs
+security:
+- bearerAuth: []
+tags:
+- name: Devices
+paths:
+  /devices:
+    get:
+      tags:
+      - Devices
+      summary: List devices
+      operationId: listDevices
+      parameters:
+      - in: query
+        name: personId
+        schema:
+          type: string
+      - in: query
+        name: workspaceId
+        schema:
+          type: string
+      - in: query
+        name: orgId
+        schema:
+          type: string
+      - in: query
+        name: max
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: A list of devices
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token

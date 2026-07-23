@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Teams API
+  description: 'Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+
+    personal access tokens, or service-app tokens issued via the Webex
+
+    Developer Portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+- url: https://webexapis.com/v1
+  description: Webex APIs
+security:
+- bearerAuth: []
+tags:
+- name: Teams
+paths:
+  /teams:
+    get:
+      tags:
+      - Teams
+      summary: List teams
+      operationId: listTeams
+      parameters:
+      - in: query
+        name: max
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: A list of teams
+    post:
+      tags:
+      - Teams
+      summary: Create a team
+      operationId: createTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Created team
+  /teams/{teamId}:
+    parameters:
+    - in: path
+      name: teamId
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Teams
+      summary: Get team details
+      operationId: getTeam
+      responses:
+        '200':
+          description: A team
+    put:
+      tags:
+      - Teams
+      summary: Update a team
+      operationId: updateTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated team
+    delete:
+      tags:
+      - Teams
+      summary: Delete a team
+      operationId: deleteTeam
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token

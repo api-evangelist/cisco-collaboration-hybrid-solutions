@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Memberships API
+  description: 'Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+
+    personal access tokens, or service-app tokens issued via the Webex
+
+    Developer Portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+- url: https://webexapis.com/v1
+  description: Webex APIs
+security:
+- bearerAuth: []
+tags:
+- name: Memberships
+paths:
+  /memberships:
+    get:
+      tags:
+      - Memberships
+      summary: List memberships
+      operationId: listMemberships
+      parameters:
+      - in: query
+        name: roomId
+        schema:
+          type: string
+      - in: query
+        name: personId
+        schema:
+          type: string
+      - in: query
+        name: personEmail
+        schema:
+          type: string
+          format: email
+      - in: query
+        name: max
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: A list of memberships
+    post:
+      tags:
+      - Memberships
+      summary: Create a membership
+      operationId: createMembership
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roomId:
+                  type: string
+                personId:
+                  type: string
+                personEmail:
+                  type: string
+                  format: email
+                isModerator:
+                  type: boolean
+      responses:
+        '200':
+          description: Created membership
+  /memberships/{membershipId}:
+    parameters:
+    - in: path
+      name: membershipId
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Memberships
+      summary: Get a membership
+      operationId: getMembership
+      responses:
+        '200':
+          description: A membership
+    put:
+      tags:
+      - Memberships
+      summary: Update a membership
+      operationId: updateMembership
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                isModerator:
+                  type: boolean
+      responses:
+        '200':
+          description: Updated membership
+    delete:
+      tags:
+      - Memberships
+      summary: Delete a membership
+      operationId: deleteMembership
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token
