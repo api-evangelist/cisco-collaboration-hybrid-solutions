@@ -1,0 +1,471 @@
+openapi: 3.1.0
+info:
+  title: Cisco Webex Platform API (Collaboration Hybrid Solutions)
+  description: |
+    Core Webex platform APIs used in Cisco Collaboration Hybrid Solutions
+    deployments for messaging, meetings, teams, spaces (rooms), memberships,
+    webhooks, and devices. Authentication uses OAuth 2.0 access tokens,
+    personal access tokens, or service-app tokens issued via the Webex
+    Developer Portal.
+  version: "1.0.0"
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/getting-started
+servers:
+  - url: https://webexapis.com/v1
+    description: Webex APIs
+security:
+  - bearerAuth: []
+tags:
+  - name: Rooms
+  - name: Messages
+  - name: Memberships
+  - name: Teams
+  - name: TeamMemberships
+  - name: Webhooks
+  - name: Devices
+paths:
+  /rooms:
+    get:
+      tags: [Rooms]
+      summary: List rooms (spaces)
+      operationId: listRooms
+      parameters:
+        - in: query
+          name: teamId
+          schema: { type: string }
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum: [direct, group]
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            enum: [id, lastactivity, created]
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of rooms
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: "#/components/schemas/Room" }
+    post:
+      tags: [Rooms]
+      summary: Create a room
+      operationId: createRoom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RoomCreate" }
+      responses:
+        "200":
+          description: The created room
+  /rooms/{roomId}:
+    parameters:
+      - in: path
+        name: roomId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Rooms]
+      summary: Get room details
+      operationId: getRoom
+      responses:
+        "200":
+          description: Room details
+    put:
+      tags: [Rooms]
+      summary: Update a room
+      operationId: updateRoom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RoomCreate" }
+      responses:
+        "200":
+          description: Updated room
+    delete:
+      tags: [Rooms]
+      summary: Delete a room
+      operationId: deleteRoom
+      responses:
+        "204":
+          description: Deleted
+  /messages:
+    get:
+      tags: [Messages]
+      summary: List messages in a room
+      operationId: listMessages
+      parameters:
+        - in: query
+          name: roomId
+          required: true
+          schema: { type: string }
+        - in: query
+          name: mentionedPeople
+          schema: { type: string }
+        - in: query
+          name: before
+          schema: { type: string, format: date-time }
+        - in: query
+          name: beforeMessage
+          schema: { type: string }
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: "#/components/schemas/Message" }
+    post:
+      tags: [Messages]
+      summary: Post a message
+      operationId: createMessage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/MessageCreate" }
+      responses:
+        "200":
+          description: Created message
+  /messages/{messageId}:
+    parameters:
+      - in: path
+        name: messageId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Messages]
+      summary: Get message details
+      operationId: getMessage
+      responses:
+        "200":
+          description: A message
+    delete:
+      tags: [Messages]
+      summary: Delete a message
+      operationId: deleteMessage
+      responses:
+        "204":
+          description: Deleted
+  /memberships:
+    get:
+      tags: [Memberships]
+      summary: List memberships
+      operationId: listMemberships
+      parameters:
+        - in: query
+          name: roomId
+          schema: { type: string }
+        - in: query
+          name: personId
+          schema: { type: string }
+        - in: query
+          name: personEmail
+          schema: { type: string, format: email }
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of memberships
+    post:
+      tags: [Memberships]
+      summary: Create a membership
+      operationId: createMembership
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roomId: { type: string }
+                personId: { type: string }
+                personEmail: { type: string, format: email }
+                isModerator: { type: boolean }
+      responses:
+        "200":
+          description: Created membership
+  /memberships/{membershipId}:
+    parameters:
+      - in: path
+        name: membershipId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Memberships]
+      summary: Get a membership
+      operationId: getMembership
+      responses:
+        "200":
+          description: A membership
+    put:
+      tags: [Memberships]
+      summary: Update a membership
+      operationId: updateMembership
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                isModerator: { type: boolean }
+      responses:
+        "200":
+          description: Updated membership
+    delete:
+      tags: [Memberships]
+      summary: Delete a membership
+      operationId: deleteMembership
+      responses:
+        "204":
+          description: Deleted
+  /teams:
+    get:
+      tags: [Teams]
+      summary: List teams
+      operationId: listTeams
+      parameters:
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of teams
+    post:
+      tags: [Teams]
+      summary: Create a team
+      operationId: createTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string }
+      responses:
+        "200":
+          description: Created team
+  /teams/{teamId}:
+    parameters:
+      - in: path
+        name: teamId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Teams]
+      summary: Get team details
+      operationId: getTeam
+      responses:
+        "200":
+          description: A team
+    put:
+      tags: [Teams]
+      summary: Update a team
+      operationId: updateTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Updated team
+    delete:
+      tags: [Teams]
+      summary: Delete a team
+      operationId: deleteTeam
+      responses:
+        "204":
+          description: Deleted
+  /webhooks:
+    get:
+      tags: [Webhooks]
+      summary: List webhooks
+      operationId: listWebhooks
+      parameters:
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of webhooks
+    post:
+      tags: [Webhooks]
+      summary: Create a webhook
+      operationId: createWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, targetUrl, resource, event]
+              properties:
+                name: { type: string }
+                targetUrl: { type: string, format: uri }
+                resource:
+                  type: string
+                  enum: [messages, memberships, rooms, attachmentActions, meetings, recordings, telephonyCalls]
+                event:
+                  type: string
+                  enum: [created, updated, deleted, started, ended]
+                filter: { type: string }
+                secret: { type: string }
+      responses:
+        "200":
+          description: Created webhook
+  /webhooks/{webhookId}:
+    parameters:
+      - in: path
+        name: webhookId
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Webhooks]
+      summary: Get webhook details
+      operationId: getWebhook
+      responses:
+        "200":
+          description: A webhook
+    put:
+      tags: [Webhooks]
+      summary: Update a webhook
+      operationId: updateWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "200":
+          description: Updated webhook
+    delete:
+      tags: [Webhooks]
+      summary: Delete a webhook
+      operationId: deleteWebhook
+      responses:
+        "204":
+          description: Deleted
+  /devices:
+    get:
+      tags: [Devices]
+      summary: List devices
+      operationId: listDevices
+      parameters:
+        - in: query
+          name: personId
+          schema: { type: string }
+        - in: query
+          name: workspaceId
+          schema: { type: string }
+        - in: query
+          name: orgId
+          schema: { type: string }
+        - in: query
+          name: max
+          schema: { type: integer }
+      responses:
+        "200":
+          description: A list of devices
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token
+  schemas:
+    Room:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        type:
+          type: string
+          enum: [direct, group]
+        isLocked: { type: boolean }
+        teamId: { type: string }
+        lastActivity: { type: string, format: date-time }
+        creatorId: { type: string }
+        created: { type: string, format: date-time }
+        ownerId: { type: string }
+        classificationId: { type: string }
+        isAnnouncementOnly: { type: boolean }
+        isReadOnly: { type: boolean }
+        isPublic: { type: boolean }
+        madePublic: { type: string, format: date-time }
+        description: { type: string }
+    RoomCreate:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        teamId: { type: string }
+        classificationId: { type: string }
+        isLocked: { type: boolean }
+        isPublic: { type: boolean }
+        description: { type: string }
+    Message:
+      type: object
+      properties:
+        id: { type: string }
+        roomId: { type: string }
+        roomType:
+          type: string
+          enum: [direct, group]
+        toPersonId: { type: string }
+        toPersonEmail: { type: string, format: email }
+        text: { type: string }
+        markdown: { type: string }
+        html: { type: string }
+        files:
+          type: array
+          items: { type: string, format: uri }
+        personId: { type: string }
+        personEmail: { type: string, format: email }
+        created: { type: string, format: date-time }
+        mentionedPeople:
+          type: array
+          items: { type: string }
+        attachments:
+          type: array
+          items: { type: object }
+    MessageCreate:
+      type: object
+      properties:
+        roomId: { type: string }
+        parentId: { type: string }
+        toPersonId: { type: string }
+        toPersonEmail: { type: string, format: email }
+        text: { type: string }
+        markdown: { type: string }
+        files:
+          type: array
+          items: { type: string, format: uri }
+        attachments:
+          type: array
+          items: { type: object }

@@ -1,0 +1,24 @@
+{
+  "provider": "cisco-collaboration-hybrid-solutions",
+  "sources": [
+    "cisco-collaboration-hybrid-solutions-devices-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-memberships-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-messages-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-rooms-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-teams-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "cisco-collaboration-hybrid-solutions-devices-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-memberships-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-messages-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-rooms-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-teams-api-openapi.yml",
+    "cisco-collaboration-hybrid-solutions-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
