@@ -1,15 +1,14 @@
 aid: cisco-collaboration-hybrid-solutions
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/cisco-collaboration-hybrid-solutions/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/cisco-collaboration-hybrid-solutions/refs/heads/main/apis.yml
 name: Cisco Collaboration Hybrid Solutions
 tags:
-  - Calling
-  - Collaboration
-  - Hybrid Cloud
-  - Meetings
-  - Messaging
-  - Unified Communications
-  - Webex
+- Calling
+- Collaboration
+- Hybrid Cloud
+- Meetings
+- Messaging
+- Unified Communications
+- Webex
 type: Index
 accessModel:
   pricing: freemium
@@ -27,15 +26,12 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cisco-collaboration-hybrid-solutions.png
 access: 3rd-Party
 created: '2024-01-15'
-modified: '2026-04-23'
+modified: '2026-08-19'
 position: Consumer
 specificationVersion: '0.23'
-description: >-
-  APIs for Cisco's hybrid collaboration solutions that combine Webex cloud
-  services with on-premises Unified Communications Manager (CUCM),
-  Expressway, and supporting infrastructure. Hybrid Services let an
-  organization keep calling, calendaring, and identity on-premises while
-  using Webex for meetings, messaging, devices, and management.
+description: APIs for Cisco's hybrid collaboration solutions that combine Webex cloud services with on-premises
+  Unified Communications Manager (CUCM), Expressway, and supporting infrastructure. Hybrid Services let an organization
+  keep calling, calendaring, and identity on-premises while using Webex for meetings, messaging, devices, and management.
 apis:
 - aid: cisco-collaboration-hybrid-solutions:webex-meetings
   name: Webex Meetings API
@@ -50,9 +46,8 @@ apis:
     type: Documentation
   - url: https://developer.webex.com/docs/api/v1/meetings
     type: Reference
-  description: >-
-    Schedule, list, update, and cancel Webex meetings; manage participants, recordings, transcripts, and
-    meeting templates.
+  description: Schedule, list, update, and cancel Webex meetings; manage participants, recordings, transcripts,
+    and meeting templates.
 - aid: cisco-collaboration-hybrid-solutions:webex-hybrid-services
   name: Webex Hybrid Services API
   tags:
@@ -67,8 +62,7 @@ apis:
     type: Documentation
   - url: https://developer.webex.com/docs/api/v1/hybrid-clusters
     type: Reference
-  description: >-
-    Manage Webex Hybrid Calendar, Hybrid Call Service, Hybrid Message, Video Mesh nodes, and other connectors
+  description: Manage Webex Hybrid Calendar, Hybrid Call Service, Hybrid Message, Video Mesh nodes, and other connectors
     that bridge on-premises collaboration infrastructure to the Webex cloud.
 - aid: cisco-collaboration-hybrid-solutions:webex-calling
   name: Webex Calling API
@@ -84,9 +78,8 @@ apis:
     type: Documentation
   - url: https://developer.webex.com/docs/api/v1/call-controls
     type: Reference
-  description: >-
-    Cloud calling capabilities including call control, dial plans, voicemail, voice portals, queues, hunt
-    groups, and number provisioning.
+  description: Cloud calling capabilities including call control, dial plans, voicemail, voice portals, queues,
+    hunt groups, and number provisioning.
 - aid: cisco-collaboration-hybrid-solutions:control-hub
   name: Control Hub API
   tags:
@@ -101,8 +94,7 @@ apis:
     type: Documentation
   - url: https://developer.webex.com/docs/api/v1/admin-audit-events
     type: Reference
-  description: >-
-    Administer Webex organizations, users, licenses, audit events, and service settings programmatically.
+  description: Administer Webex organizations, users, licenses, audit events, and service settings programmatically.
 - aid: cisco-collaboration-hybrid-solutions:webex-devices
   name: Webex Devices API
   tags:
@@ -116,8 +108,7 @@ apis:
     type: Documentation
   - url: https://roomos.cisco.com/xapi
     type: xAPI Reference
-  description: >-
-    Manage and control Webex Room and Desk Devices including remote configuration, status queries, and
+  description: Manage and control Webex Room and Desk Devices including remote configuration, status queries, and
     the device-side xAPI.
 - aid: cisco-collaboration-hybrid-solutions:webex-events
   name: Webex Events API
@@ -130,8 +121,7 @@ apis:
   properties:
   - url: https://developer.webex.com/docs/api/v1/events
     type: Documentation
-  description: >-
-    Create and manage Webex Webinars and large-format virtual events, including registration, panelists,
+  description: Create and manage Webex Webinars and large-format virtual events, including registration, panelists,
     and analytics.
 - aid: cisco-collaboration-hybrid-solutions:cisco-collaboration-hybrid-solutions-devices-api
   name: Cisco Collaboration Hybrid Solutions Devices API
@@ -149,11 +139,9 @@ apis:
     url: https://developer.webex.com/docs/integrations
   - type: SDKs
     url: https://developer.webex.com/docs/sdks
-- aid: >-
-    cisco-collaboration-hybrid-solutions:cisco-collaboration-hybrid-solutions-memberships-api
+- aid: cisco-collaboration-hybrid-solutions:cisco-collaboration-hybrid-solutions-memberships-api
   name: Cisco Collaboration Hybrid Solutions Memberships API
-  description: >-
-    The Memberships API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for memberships.
+  description: The Memberships API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for memberships.
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
@@ -169,8 +157,7 @@ apis:
     url: https://developer.webex.com/docs/sdks
 - aid: cisco-collaboration-hybrid-solutions:cisco-collaboration-hybrid-solutions-messages-api
   name: Cisco Collaboration Hybrid Solutions Messages API
-  description: >-
-    The Messages API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for messages.
+  description: The Messages API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for messages.
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
@@ -218,8 +205,7 @@ apis:
     url: https://developer.webex.com/docs/sdks
 - aid: cisco-collaboration-hybrid-solutions:cisco-collaboration-hybrid-solutions-webhooks-api
   name: Cisco Collaboration Hybrid Solutions Webhooks API
-  description: >-
-    The Webhooks API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for webhooks.
+  description: The Webhooks API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for webhooks.
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
@@ -234,40 +220,21 @@ apis:
   - type: SDKs
     url: https://developer.webex.com/docs/sdks
 common:
-  - type: Portal
-    url: https://developer.cisco.com/collaboration/
-  - type: Webex Developer Portal
-    url: https://developer.webex.com/
-  - type: GettingStarted
-    url: https://developer.webex.com/docs/getting-started
-  - type: Authentication
-    url: https://developer.webex.com/docs/integrations
-  - type: Webhooks
-    url: https://developer.webex.com/docs/api/guides/webhooks
-  - type: ChangeLog
-    url: https://developer.webex.com/changelog
-  - type: StatusPage
-    url: https://status.webex.com/
-  - type: Community
-    url: https://community.cisco.com/t5/collaboration-voice-and-video/bd-p/discussions-collaboration
-  - type: GitHubOrganization
-    url: https://github.com/WebexSamples
-  - type: PrivacyPolicy
-    url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
-  - type: TermsOfService
-    url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
-  - type: JSONLD
-    url: json-ld/cisco-collaboration-context.jsonld
+- type: ParentCompany
+  url: https://apis.io/providers/webex/
+  name: Webex
+  x-relationship: product
+  x-generated-by: cisco-family:2026-08-19
+- type: AgenticAccess
+  url: agentic-access/cisco-collaboration-hybrid-solutions-agentic-access.yml
+- type: DomainSecurity
+  url: security/cisco-collaboration-hybrid-solutions-domain-security.yml
+- type: Authentication
+  url: authentication/cisco-collaboration-hybrid-solutions-authentication.yml
+- url: https://blog.webex.com/feed/
+  type: Blog
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-
-common:
-  - type: AgenticAccess
-    url: agentic-access/cisco-collaboration-hybrid-solutions-agentic-access.yml
-  - type: DomainSecurity
-    url: security/cisco-collaboration-hybrid-solutions-domain-security.yml
-  - type: Authentication
-    url: authentication/cisco-collaboration-hybrid-solutions-authentication.yml
-  - url: https://blog.webex.com/feed/
-    type: Blog
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-parent: webex
+x-relationship: product
