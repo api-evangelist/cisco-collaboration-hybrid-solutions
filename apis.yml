@@ -85,6 +85,11 @@ apis:
   tags:
   - Administration
   - Management
+  - Organization
+  - User
+  tags_raw:
+  - Administration
+  - Management
   - Organizations
   - Users
   humanURL: https://developer.webex.com/docs/api/v1/organizations
@@ -98,6 +103,9 @@ apis:
 - aid: cisco-collaboration-hybrid-solutions:webex-devices
   name: Webex Devices API
   tags:
+  - Devices
+  - Room Systems
+  tags_raw:
   - Devices
   - Endpoints
   - Room Systems
@@ -113,6 +121,10 @@ apis:
 - aid: cisco-collaboration-hybrid-solutions:webex-events
   name: Webex Events API
   tags:
+  - Event
+  - Virtual Events
+  - Webinars
+  tags_raw:
   - Events
   - Virtual Events
   - Webinars
@@ -161,6 +173,8 @@ apis:
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
@@ -193,6 +207,8 @@ apis:
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -209,6 +225,8 @@ apis:
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
