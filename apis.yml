@@ -49,6 +49,10 @@ apis:
   name: Webex Meetings API
   tags:
   - Meetings
+  - Recording
+  - Scheduling
+  tags_raw:
+  - Meetings
   - Recordings
   - Scheduling
   humanURL: https://developer.cisco.com/docs/webex-meetings/
@@ -169,6 +173,8 @@ apis:
   humanURL: https://developer.webex.com/
   baseURL: https://webexapis.com/v1
   tags:
+  - Membership
+  tags_raw:
   - Memberships
   properties:
   - type: OpenAPI
