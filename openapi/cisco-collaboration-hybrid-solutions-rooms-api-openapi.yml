@@ -117,6 +117,23 @@ paths:
           description: Deleted
 components:
   schemas:
+    RoomCreate:
+      type: object
+      required:
+      - title
+      properties:
+        title:
+          type: string
+        teamId:
+          type: string
+        classificationId:
+          type: string
+        isLocked:
+          type: boolean
+        isPublic:
+          type: boolean
+        description:
+          type: string
     Room:
       type: object
       properties:
@@ -154,23 +171,6 @@ components:
         madePublic:
           type: string
           format: date-time
-        description:
-          type: string
-    RoomCreate:
-      type: object
-      required:
-      - title
-      properties:
-        title:
-          type: string
-        teamId:
-          type: string
-        classificationId:
-          type: string
-        isLocked:
-          type: boolean
-        isPublic:
-          type: boolean
         description:
           type: string
   securitySchemes:
