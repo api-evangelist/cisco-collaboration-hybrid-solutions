@@ -256,6 +256,12 @@ apis:
   - type: SDKs
     url: https://developer.webex.com/docs/sdks
 common:
+- type: Plans
+  url: plans/cisco-collaboration-hybrid-solutions-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/cisco-collaboration-hybrid-solutions-rate-limits.yml
+- type: FinOps
+  url: finops/cisco-collaboration-hybrid-solutions-finops.yml
 - type: ParentCompany
   url: https://apis.io/providers/webex/
   name: Webex
