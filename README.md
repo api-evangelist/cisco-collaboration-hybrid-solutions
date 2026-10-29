@@ -1,4 +1,4 @@
-# Cisco Collaboration Hybrid Solutions (cisco-collaboration-hybrid-solutions)
+# Cisco Collaboration Hybrid Solutions
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,193 +66,100 @@
 
 APIs for Cisco's hybrid collaboration solutions that combine Webex cloud services with on-premises Unified Communications Manager (CUCM), Expressway, and supporting infrastructure. Hybrid Services let an organization keep calling, calendaring, and identity on-premises while using Webex for meetings, messaging, devices, and management.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cisco-collaboration-hybrid-solutions/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cisco-collaboration-hybrid-solutions/refs/heads/main/apis.yml)
+**Areas:** Calling · Collaboration · Hybrid Cloud · Meetings · Messaging · Unified Communications · Webex
 
-## Scope
+## Cisco Collaboration Hybrid Solutions on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Cisco Collaboration Hybrid Solutions is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cisco-collaboration-hybrid-solutions/](https://apis.io/providers/cisco-collaboration-hybrid-solutions/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (12)
 
-- Calling
-- Collaboration
-- Hybrid Cloud
-- Meetings
-- Messaging
-- Unified Communications
-- Webex
+- [Webex Meetings API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/webex-meetings/) — Schedule, list, update, and cancel Webex meetings; manage participants, recordings, transcripts, and meeting templates.
+- [Webex Hybrid Services API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/webex-hybrid-services/) — Manage Webex Hybrid Calendar, Hybrid Call Service, Hybrid Message, Video Mesh nodes, and other connectors that bridge on-premises collaboration…
+- [Webex Calling API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/webex-calling/) — Cloud calling capabilities including call control, dial plans, voicemail, voice portals, queues, hunt groups, and number provisioning.
+- [Control Hub API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/control-hub/) — Administer Webex organizations, users, licenses, audit events, and service settings programmatically.
+- [Webex Devices API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/webex-devices/) — Manage and control Webex Room and Desk Devices including remote configuration, status queries, and the device-side xAPI.
+- [Webex Events API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/webex-events/) — Create and manage Webex Webinars and large-format virtual events, including registration, panelists, and analytics.
+- [Cisco Collaboration Hybrid Solutions Devices API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-devices-api/) — The Devices API from Cisco Collaboration Hybrid Solutions — 1 operation(s) for devices.
+- [Cisco Collaboration Hybrid Solutions Memberships API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-memberships-api/) — The Memberships API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for memberships.
+- [Cisco Collaboration Hybrid Solutions Messages API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-messages-api/) — The Messages API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for messages.
+- [Cisco Collaboration Hybrid Solutions Rooms API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-rooms-api/) — The Rooms API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for rooms.
+- [Cisco Collaboration Hybrid Solutions Teams API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-teams-api/) — The Teams API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for teams.
+- [Cisco Collaboration Hybrid Solutions Webhooks API](https://apis.io/apis/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-webhooks-api/) — The Webhooks API from Cisco Collaboration Hybrid Solutions — 2 operation(s) for webhooks.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Webex APIs
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Core Webex platform APIs for messaging, meetings, teams, spaces, memberships, attachments, and webhooks.
+- [Cisco Collaboration Hybrid Solutions Agentic Access](https://apis.io/agentic-access/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-agentic-access/)
 
-- **Human URL:** [https://developer.webex.com/](https://developer.webex.com/)
-- **Base URL:** `https://webexapis.com/v1`
+#### JSON-LD (1)
 
-#### Tags
+Linked-data contexts for the provider's vocabulary.
 
-- Collaboration
-- Meetings
-- Messaging
-- Spaces
-- Teams
+- [Cisco Collaboration Context](https://apis.io/jsonld/cisco-collaboration-hybrid-solutions/cisco-collaboration-context/)
 
-#### Properties
+#### Collections (7)
 
-- [Documentation](https://developer.webex.com/docs/api/getting-started)
-- [OpenAPI](https://developer.webex.com/docs/api/v1/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://developer.webex.com/docs/integrations)
-- [S D Ks](https://developer.webex.com/docs/sdks)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Webex Meetings API
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions)](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-devices-api/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Memberships API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-memberships-api/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Messages API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-messages-api/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Rooms API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-rooms-api/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Teams API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-teams-api/)
+- [Cisco Webex Platform API (Collaboration Hybrid Solutions) Devices Webhooks API](https://apis.io/collections/cisco-collaboration-hybrid-solutions/open-cisco-collaboration-hybrid-solutions-webhooks-api/)
 
-Schedule, list, update, and cancel Webex meetings; manage participants, recordings, transcripts, and meeting templates.
+#### Security (2)
 
-- **Human URL:** [https://developer.cisco.com/docs/webex-meetings/](https://developer.cisco.com/docs/webex-meetings/)
-- **Base URL:** `https://webexapis.com/v1/meetings`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Cisco Collaboration Hybrid Solutions Authentication](https://apis.io/security/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-authentication/)
+- [Cisco Collaboration Hybrid Solutions Domain Security](https://apis.io/security/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-domain-security/)
 
-- Meetings
-- Recordings
-- Scheduling
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://developer.cisco.com/docs/webex-meetings/)
-- [Reference](https://developer.webex.com/docs/api/v1/meetings)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Cisco Collaboration Hybrid Solutions Plans Pricing](https://apis.io/plans/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-plans-pricing/)
 
-### Webex Hybrid Services API
+#### Rate limits (1)
 
-Manage Webex Hybrid Calendar, Hybrid Call Service, Hybrid Message, Video Mesh nodes, and other connectors that bridge on-premises collaboration infrastructure to the Webex cloud.
+Published request limits.
 
-- **Human URL:** [https://developer.cisco.com/docs/webex-hybrid-services/](https://developer.cisco.com/docs/webex-hybrid-services/)
-- **Base URL:** `https://webexapis.com/v1`
+- [Cisco Collaboration Hybrid Solutions Rate Limits](https://apis.io/rate-limits/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Calendar
-- Connectors
-- Hybrid
-- Media
+What the API costs to run, by operation.
 
-#### Properties
+- [Cisco Collaboration Hybrid Solutions Finops](https://apis.io/finops/cisco-collaboration-hybrid-solutions/cisco-collaboration-hybrid-solutions-finops/)
 
-- [Documentation](https://developer.cisco.com/docs/webex-hybrid-services/)
-- [Reference](https://developer.webex.com/docs/api/v1/hybrid-clusters)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Webex Calling API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-Cloud calling capabilities including call control, dial plans, voicemail, voice portals, queues, hunt groups, and number provisioning.
+- [Blog](https://blog.webex.com/feed/)
 
-- **Human URL:** [https://developer.webex.com/docs/api/v1/webex-calling](https://developer.webex.com/docs/api/v1/webex-calling)
-- **Base URL:** `https://webexapis.com/v1`
+## API Evangelist rating
 
-#### Tags
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
 
-- Call Control
-- Calling
-- Telephony
-- Voicemail
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
 
-#### Properties
+## How this profile is made
 
-- [Documentation](https://developer.webex.com/docs/api/v1/webex-calling)
-- [Reference](https://developer.webex.com/docs/api/v1/call-controls)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### Control Hub API
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cisco Collaboration Hybrid Solutions: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-Administer Webex organizations, users, licenses, audit events, and service settings programmatically.
+## Open an issue
 
-- **Human URL:** [https://developer.webex.com/docs/api/v1/organizations](https://developer.webex.com/docs/api/v1/organizations)
-- **Base URL:** `https://webexapis.com/v1`
-
-#### Tags
-
-- Administration
-- Management
-- Organizations
-- Users
-
-#### Properties
-
-- [Documentation](https://developer.webex.com/docs/api/v1/organizations)
-- [Reference](https://developer.webex.com/docs/api/v1/admin-audit-events)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Webex Devices API
-
-Manage and control Webex Room and Desk Devices including remote configuration, status queries, and the device-side xAPI.
-
-- **Human URL:** [https://developer.webex.com/docs/api/v1/devices](https://developer.webex.com/docs/api/v1/devices)
-- **Base URL:** `https://webexapis.com/v1`
-
-#### Tags
-
-- Devices
-- Endpoints
-- Room Systems
-
-#### Properties
-
-- [Documentation](https://developer.webex.com/docs/api/v1/devices)
-- [x A P I  Reference](https://roomos.cisco.com/xapi)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Webex Events API
-
-Create and manage Webex Webinars and large-format virtual events, including registration, panelists, and analytics.
-
-- **Human URL:** [https://developer.webex.com/docs/api/v1/events](https://developer.webex.com/docs/api/v1/events)
-- **Base URL:** `https://webexapis.com/v1`
-
-#### Tags
-
-- Events
-- Virtual Events
-- Webinars
-
-#### Properties
-
-- [Documentation](https://developer.webex.com/docs/api/v1/events)
-- [Postman Collection](collections/cisco-collaboration-hybrid-solutions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-collaboration-hybrid-solutions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://developer.cisco.com/collaboration/)
-- [Webex  Developer  Portal](https://developer.webex.com/)
-- [Getting Started](https://developer.webex.com/docs/getting-started)
-- [Authentication](https://developer.webex.com/docs/integrations)
-- [Webhooks](https://developer.webex.com/docs/api/guides/webhooks)
-- [Changelog](https://developer.webex.com/changelog)
-- [Status Page](https://status.webex.com/)
-- [Community](https://community.cisco.com/t5/collaboration-voice-and-video/bd-p/discussions-collaboration)
-- [GitHub Organization](https://github.com/WebexSamples)
-- [Privacy Policy](https://www.cisco.com/c/en/us/about/legal/privacy-full.html)
-- [Terms of Service](https://www.cisco.com/c/en/us/about/legal/terms-conditions.html)
-- [JSON-LD](json-ld/cisco-collaboration-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cisco-collaboration-hybrid-solutions/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
